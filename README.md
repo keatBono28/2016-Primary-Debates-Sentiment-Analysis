@@ -6,6 +6,8 @@ Please reach out for more information on the project (kbonomo22@gmail.com).
 
 The original data set and information about it can be found at https://www.kaggle.com/kinguistics/2016-us-presidential-primary-debates.
 
+Database information: SQL Server Management Studio was used, server name, username, and password will need to be updated in the script.
+
 Sentiment Analysis used 6 lexicons in 3 groups: Positive versus Negative, Assertive versus Passive, Republican versus Democrat.
 
 Scoring System:
