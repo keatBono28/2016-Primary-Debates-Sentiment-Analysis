@@ -1,0 +1,24 @@
+SELECT DISTINCT SpeakerName
+FROM            PresidentialDebates
+WHERE        (DebateLocation = 'Miami, Florida')
+
+
+SELECT SpeakerName, sum(Pos_NegScore) as PosNegScore
+FROM PresidentialDebates
+WHERE        (DebateLocation = 'Miami, Florida')
+GROUP BY SpeakerName
+
+SELECT SpeakerName, sum(Pos_NegScore) as PosNegScore
+FROM PresidentialDebates
+WHERE        (DebateLocation = 'Miami, Florida')
+GROUP BY SpeakerName
+
+SELECT SpeakerName, sum(Pos_NegScore) as PosNegScore, sum(Assert_PassScore) as AssPassScore, sum(Rep_DemScore) as RepDemScore, count(*) as TimesSpoken
+FROM PresidentialDebates
+GROUP BY SpeakerName
+ORDER BY PosNegScore DESC
+
+SELECT Party, sum(Pos_NegScore) as PosNegScore, sum(Assert_PassScore) as AssPassScore, sum(Rep_DemScore) as RepDemScore
+FROM PresidentialDebates
+GROUP BY Party
+ORDER BY PosNegScore DESC
